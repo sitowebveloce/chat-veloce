@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
+:root {
+    --main-color: #7400b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Rose', cursive;
+}
+
+header,
+.id span {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+
+header,
+footer {
+    height: 40px;
+}
+
+.enter,
+.profile-img,
+.home-link img {
+    width: 24px;
+}
+
+.chat {
+    width: 56px;
+}
+
+.title-div,
+form {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+form {
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 10px;
+    color: var(--main-color);
+}
+
+.room {
+    padding: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+.board {
+    width: 500px;
+    height: 300px;
+    background-color: #d0d1ff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 1s ease;
+    box-shadow: inset 4px 4px 8px #b1b2d9, 4px 4px 8px #b1b2d9, inset -4px -4px 8px #eff0ff, -4px -4px 8px #eff0ff, inset 4px 4px 8px #b1b2d9, 4px 4px 8px #b1b2d9, inset -4px -4px 8px #eff0ff, -4px -4px 8px #eff0ff;
+    margin-top: 20px;
+    padding: 10px;
+    /* word-wrap: break-word; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+form input {
+    width: 44%;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 6px #d9d9d9, inset -2px -2px 6px #ffffff, inset 2px 2px 6px #d9d9d9, inset 2px 2px 6px #ffffff;
+    margin-bottom: 5px;
+}
+
+.btn-submit {
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 1s ease;
+    margin-left: 5px;
+}
+
+.btn-submit:hover {
+    transform: scale(1.08);
+}
+
+.btn-submit:active {
+    transform: scale(.88);
+}
+
+footer {
+    text-align: center;
+}
+
+.says {
+    font-weight: bold;
+    color: #f15bb5;
+}
+
+.hello {
+    font-weight: bold;
+    color: #f29e4c;
+}
+
+.joined {
+    font-weight: bold;
+    color: #ff0054;
+}
+
+.reply {
+    font-weight: bold;
+    color: #f35b04;
+}
+
+.already {
+    font-weight: bold;
+    color: #fb5607;
+}
+
+.message-board {
+    font-weight: bold;
+    color: #f71735;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d0d1ff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: 1s ease;
+    background: linear-gradient(145deg, #b4d0e6, #d6f7ff);
+    box-shadow: inset 4px 4px 8px #aac4d9, 4px 4px 8px #aac4d9, inset -4px -4px 8px #e6ffff, -4px -4px 8px #e6ffff, inset 4px 4px 8px #aac4d9, 4px 4px 8px #aac4d9, inset -4px -4px 8px #e6ffff, -4px -4px 8px #e6ffff;
+    overflow-y: scroll;
+    height: 80px;
+    width: 500px;
+    font-size: .8rem;
+    margin-top: 10px;
+    transition: 1s ease;
+}
+
+
+/* BAR  */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 4px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: purple;
+    border-radius: 4px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+
+
+/* MEDIA QUERY  */
+
+@media (max-width: 768px) {
+    .board,
+    .users {
+        width: 350px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}

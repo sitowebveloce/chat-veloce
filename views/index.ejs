@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" type="image/png" href="/imgs/love.png">
+</head>
+
+<body>
+    <!-- HEADER  -->
+    <header>
+        <a href="/" class='home-link'>
+            <img src="/imgs/home.svg" alt="home">
+        </a>
+        <small class="id"></small>
+    </header>
+    <!-- CONTENT  -->
+    <div class="content">
+        <div class="title-div">
+            <img class="chat" src="/imgs/chat.svg" alt="">
+            <h1>Chat Veloce</h1>
+        </div>
+        <div class="room">
+            <% if(room !== undefined || null) {%>
+                <small>  Room:
+                <%= room.charAt(0).toUpperCase() + room.slice(1) %>
+                    <%}%>
+                </small>
+        </div>
+        <!-- FORM  -->
+        <form autocomplete="off">
+            <input class="message" type="text" name="message" required>
+            <button class="btn-submit"><img class="enter" src="/imgs/enter.svg" alt=""></button>
+        </form>
+
+        <!-- BOARD  -->
+        <div class="board"></div>
+        <!-- USER  -->
+        <div class="users"></div>
+        <!-- END CONTENT  -->
+    </div>
+
+    <footer>
+        <small>Icons made with 💜 from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></small>
+    </footer>
+
+    <!-- PASS ROOM INFO  -->
+    <script>
+        let roomName = "<%= room %>" // pass a string
+    </script>
+    <!-- SOCKET IO  -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- MAIN.JS  -->
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
