@@ -62,6 +62,11 @@ io.on('connection', (socket) => {
         socket.on('reply-out', msg => {
             socket.to(room).broadcast.emit('reply-in', msg);
         });
+        // ON NEW NAME
+        socket.on('new-name-out', ({ id, newName }) => {
+            // Emit new name to all inside the room
+            socket.to(room).broadcast.emit('new-name-in', { id, newName });
+        });
         // ─── ON DISCONNECT ──────────────────────────────────────────────────────────────
         socket.on('disconnect', () => {
             console.log(`User ${id} disconnected.`);

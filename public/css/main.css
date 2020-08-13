@@ -160,6 +160,15 @@ footer {
     font-size: .8rem;
     margin-top: 10px;
     transition: 1s ease;
+    padding: 5px;
+}
+
+.users-in {
+    padding: 5px 0;
+}
+
+.users-in:first-child {
+    margin-top: 33px;
 }
 
 
